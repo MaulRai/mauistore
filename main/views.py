@@ -18,13 +18,3 @@ def show_main(request):
     }
 
     return render(request, "main.html", context)
-
-def show_products(request, index):
-    context = {
-        'image_url' : db_temp[index][0],
-        'name' : db_temp[index][1],
-        'price' : db_temp[index][2],
-        'desc' : db_temp[index][3],
-    }
-
-    return render(request, "main.html", context)

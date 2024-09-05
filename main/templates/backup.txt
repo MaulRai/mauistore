@@ -1,0 +1,236 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mauistore</title>
+  <style>
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 10px 20px;
+      background-color: #f8f8f8;
+    }
+    .navbar .heading {
+        font-size: 28px;
+        font-weight: 700;
+        margin-right: 20px;
+        font-family: 'Poppins', sans-serif; 
+        background: linear-gradient(45deg, #6a11cb, #2575fc); 
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        letter-spacing: 1px;
+      }
+    .navbar .kategori {
+      margin-right: 20px;
+    }
+    .navbar .search-container {
+      display: flex;
+      flex-grow: 1;
+      margin-right: 20px;
+    }
+    .navbar .search-bar {
+      flex-grow: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px 0 0 4px;
+    }
+    .navbar .search-button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+    .navbar .cart-icon {
+      margin-right: 20px;
+    }
+    .navbar .divider {
+      height: 24px;
+      width: 1px;
+      background-color: #ccc;
+      margin-right: 20px;
+    }
+    .navbar button {
+      margin-right: 10px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .navbar button:last-child {
+      margin-right: 0;
+    }
+    .slider-container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .slider img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .slider-item {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .nav-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .nav-buttons button {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .nav-buttons button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+  <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+</head>
+<body>
+
+<div style="display: flex; justify-content: flex-end">
+    <div style="padding: 0 20px;">Tentang</div>
+    <div style="padding: 0 20px;">Mitra</div>
+    <div style="padding: 0 20px;">Mulai Berjualan</div>
+    <div style="padding: 0 20px;">Promo</div>
+</div>
+
+<div class="navbar">
+  <div class="heading">mauistore</div>
+  <div class="kategori">Kategori</div>
+  <div class="search-container">
+    <input type="text" class="search-bar" placeholder="Search...">
+    <button class="search-button">🔍</button>
+  </div>
+  <div class="cart-icon">🛒</div>
+  <div class="divider"></div>
+  <button>Masuk</button>
+  <button>Daftar</button>
+</div>
+
+<div class="slider-container">
+  <div class="slider">
+    <div class="slider-item"><img src="{% static 'assets/banner1.png'%}" alt="Image 1"></div>
+    <div class="slider-item"><img src="{% static 'assets/banner2.png'%}" alt="Image 2"></div>
+  </div>
+
+  <div class="nav-buttons">
+    <button id="prev">&lt</button>
+    <button id="next">&gt</button>
+  </div>
+</div>
+
+<div class="category-box">
+  <h2>Kategori Pilihan</h2>
+  <div class="product-row">
+      <div class="product-item">
+          <img src= "{% static 'assets/plushie1.jpg'%}" alt="Product 1">
+          <div class="product-details">
+              <p class="product-name">Hitagi Plushie</p>
+              <p class="product-price">Rp400.000</p>
+              <p class="product-desc">Koyo koyooo</p>
+          </div>
+      </div>
+      <div class="product-item">
+          <img src="{% static 'assets/plushie2.jpg'%}" alt="Product 1">
+          <div class="product-details">
+              <p class="product-name">Suruga Plushie</p>
+              <p class="product-price">Rp400.000</p>
+              <p class="product-desc">I love my senpai!</p>
+          </div>
+      </div>
+      <div class="product-item">
+          <img src="{% static 'assets/plushie3.jpg'%}" alt="Product 1">
+          <div class="product-details">
+              <p class="product-name">Karen Plushie</p>
+              <p class="product-price">Rp500.000</p>
+              <p class="product-desc">Asta la vistaaa</p>
+          </div>
+      </div>
+      <div class="product-item">
+          <img src="{% static 'assets/plushie4.jpg'%}" alt="Product 1">
+          <div class="product-details">
+              <p class="product-name">Hanekawa Plushie</p>
+              <p class="product-price">Rp550.000</p>
+              <p class="product-desc">i don't know everything i just know what i know</p>
+          </div>
+      </div>
+      <div class="product-item">
+          <img src="{% static 'assets/plushie5.jpg'%}" alt="Product 1">
+          <div class="product-details">
+              <p class="product-name">Shinobu Plushie</p>
+              <p class="product-price">Rp450.000</p>
+              <p class="product-desc">ka..ka.. >_<</p>
+          </div>
+      </div>
+      <div class="product-item">
+          <img src="{% static 'assets/plushie6.jpg'%}" alt="Product 1">
+          <div class="product-details">
+              <p class="product-name">Nadeko Plushie</p>
+              <p class="product-price">Rp400.000</p>
+              <p class="product-desc">Koyomi-onichan</p>
+          </div>
+      </div>
+      <div class="product-item">
+          <img src="{% static 'assets/plushie7.jpg'%}" alt="Product 1">
+          <div class="product-details">
+              <p class="product-name">Mayoi Plushie</p>
+              <p class="product-price">Rp450.000</p>
+              <p class="product-desc">Sorry I stuttered, Arararagi-san/p>
+          </div>
+      </div>
+  </div>
+</div>
+  
+<script>
+  const slider = document.querySelector('.slider');
+  const sliderItems = document.querySelectorAll('.slider-item');
+  const prevButton = document.getElementById('prev');
+  const nextButton = document.getElementById('next');
+  let counter = 0;
+
+  function updateSliderPosition() {
+    slider.style.transform = 'translateX(' + (-counter * 100) + '%)';
+  }
+
+  nextButton.addEventListener('click', () => {
+    counter = (counter + 1) % sliderItems.length;
+    updateSliderPosition();
+  });
+
+  prevButton.addEventListener('click', () => {
+    counter = (counter - 1 + sliderItems.length) % sliderItems.length;
+    updateSliderPosition();
+  });
+</script>
+
+</body>
+</html>
+
