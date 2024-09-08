@@ -1,6 +1,123 @@
-<h5>NPM: </h5>
-<p>{{ npm }}<p>
-<h5>Name: </h5>
-<p>{{ name }}<p>
-<h5>Class: </h5>
-<p>{{ class }}<p>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mauistore</title>
+  {% comment %} jejak style {% endcomment %}
+  <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+</head>
+<body>
+
+  <div class="header">
+    <p>Tentang</p>
+    <p>Mitra</p>
+    <p>Mulai Berjualan</p>
+    <p>Promo</p>
+</div>
+
+<div class="navbar">
+  <div class="heading">mauistore</div>
+  <div class="kategori">Kategori</div>
+  <div class="search-container">
+    <input type="text" class="search-bar" placeholder="Search...">
+    <button class="search-button">🔍</button>
+  </div>
+  <div class="cart-icon">🛒</div>
+  <div class="divider"></div>
+  <button>Masuk</button>
+  <button>Daftar</button>
+</div>
+
+<div class="welcome-box">
+  <p>
+    Selamat datang di <span class="heading">mauistore</span><br>
+    Web ini dikembangkan oleh {{ name }}<br>
+    NPM {{ npm }} dari kelas {{ class }}<br>
+    Selamat berbelanja!
+  </p>
+</div>
+
+<div class="slider-container">
+  <div class="slider">
+    <div class="slider-item"><img src="{% static 'assets/bannerkobo.png'%}" alt="Image K"></div>
+    <div class="slider-item"><img src="{% static 'assets/banner0.png'%}" alt="Image 0"></div>
+    <div class="slider-item"><img src="{% static 'assets/banner1.png'%}" alt="Image 1"></div>
+    <div class="slider-item"><img src="{% static 'assets/banner2.png'%}" alt="Image 2"></div>
+  </div>
+
+  <div class="nav-buttons">
+    <button id="prev">&lt</button>
+    <button id="next">&gt</button>
+  </div>
+</div>
+
+<div class="category-box">
+  <h2>Kategori Pilihan</h2>
+  <div class="product-row">
+      <div class="product-item">
+          <img src= "{% static 'assets/plushie1.jpg'%}" alt="Product 1">
+          <div class="product-details">
+              <p class="product-name">Hitagi Plushie</p>
+              <p class="product-price">Rp400.000</p>
+              <p class="product-desc">Koyo koyooo</p>
+          </div>
+      </div>
+      <div class="product-item">
+          <img src="{% static 'assets/plushie2.jpg'%}" alt="Product 1">
+          <div class="product-details">
+              <p class="product-name">Suruga Plushie</p>
+              <p class="product-price">Rp400.000</p>
+              <p class="product-desc">I love my senpai!</p>
+          </div>
+      </div>
+      <div class="product-item">
+          <img src="{% static 'assets/plushie3.jpg'%}" alt="Product 1">
+          <div class="product-details">
+              <p class="product-name">Karen Plushie</p>
+              <p class="product-price">Rp500.000</p>
+              <p class="product-desc">Asta la vistaaa</p>
+          </div>
+      </div>
+      <div class="product-item">
+          <img src="{% static 'assets/plushie4.jpg'%}" alt="Product 1">
+          <div class="product-details">
+              <p class="product-name">Hanekawa Plushie</p>
+              <p class="product-price">Rp550.000</p>
+              <p class="product-desc">i don't know everything i just know what i know</p>
+          </div>
+      </div>
+      <div class="product-item">
+          <img src="{% static 'assets/plushie5.jpg'%}" alt="Product 1">
+          <div class="product-details">
+              <p class="product-name">Shinobu Plushie</p>
+              <p class="product-price">Rp450.000</p>
+              <p class="product-desc">ka..ka.. >_<</p>
+          </div>
+      </div>
+      <div class="product-item">
+          <img src="{% static 'assets/plushie6.jpg'%}" alt="Product 1">
+          <div class="product-details">
+              <p class="product-name">Nadeko Plushie</p>
+              <p class="product-price">Rp400.000</p>
+              <p class="product-desc">Koyomi-onichan</p>
+          </div>
+      </div>
+      <div class="product-item">
+          <img src="{% static 'assets/plushie7.jpg'%}" alt="Product 1">
+          <div class="product-details">
+              <p class="product-name">Mayoi Plushie</p>
+              <p class="product-price">Rp450.000</p>
+              <p class="product-desc">Sorry I stuttered, Arararagi-san</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+  
+<script src="{% static 'js/scripts.js' %}"></script>
+
+</body>
+</html>
+
