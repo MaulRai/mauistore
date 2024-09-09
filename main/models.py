@@ -10,7 +10,6 @@ class MoodEntry(models.Model):
     def is_mood_strong(self):
         return self.mood_intensity > 5
     
-    
 class Product(models.Model):
     name = models.CharField(max_length=63)
     price = models.IntegerField()
